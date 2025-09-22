@@ -36,3 +36,12 @@ nav a:hover {
   color: white;
   text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
 }
+
+.logo {
+  text-decoration: none;
+  color: white;
+}
+
+.logo h1 {
+  font-size: 24px;
+}
