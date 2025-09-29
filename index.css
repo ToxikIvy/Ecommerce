@@ -46,7 +46,7 @@ nav a:hover {
   font-size: 24px;
 }
 
-.contact {
+.contactMain, .contactF {
   max-width: 600px;
   margin: 50px auto;
   padding: 20px;
@@ -54,13 +54,43 @@ nav a:hover {
   border-radius: 10px;
 }
 
-.contact h1 {
+.contactMain h1 {
   text-align: center;
   margin-bottom: 20px;
 }
 
-.form {
+.contactMain ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contactMain li {
+  margin: 10px 0;
+}
+
+.contactF form {
   display: flex;
   flex-direction: column;
   gap: 15px;
+}
+
+.contactF input,
+.contactF textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contactF button {
+  padding: 10px;
+  border: none;
+  background: #e0dff0;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.contactF button:hover {
+  background: #82809e;
 }
