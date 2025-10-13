@@ -8,14 +8,10 @@ addToCartButtons.forEach(button => {
     event.preventDefault();
 
     const productElement = event.target.closest('.product');
-
     const productName = product.querySelector('h3').textContent;
     const productPrice = productElement.querySelector('.price').textContent;
 
-    cart.push({
-      name: productName,
-      price: productPrice
-    });
+    cart.push({ name: productName, price: productPrice });
 
     cartCount.textContent = cart.length;
 
