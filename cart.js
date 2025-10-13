@@ -1,19 +1,25 @@
-const cart = [];
-const buttons = document.querySelectorAll('.add-to-cart');
+const addToCartButtons = document.querySelectorAll('.btn');
 const cartCount = document.getElementbyId('card-count');
 
-buttons.forEach(button => {
+let cart = [];
+
+addToCartButtons.forEach(button => {
   button.addEventListener('click', event => {
     event.preventDefault();
 
-    const product = event.target.closest('.product');
-    const productName = product.querySelector('h3').textContent;
+    const productElement = event.target.closest('.product');
 
-    cart.push(productName);
+    const productName = product.querySelector('h3').textContent;
+    const productPrice = productElement.querySelector('.price').textContent;
+
+    cart.push({
+      name: productName,
+      price: productPrice
+    });
 
     cartCount.textContent = cart.length;
 
-    console.log('Cart:', cart);
+    console.log("🛒 Cart:", cart);
 
   });
 });
