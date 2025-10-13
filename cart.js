@@ -1,5 +1,5 @@
 const addToCartButtons = document.querySelectorAll('.btn');
-const cartCount = document.getElementbyId('card-count');
+const cartCount = document.getElementById('card-count');
 
 let cart = [];
 
