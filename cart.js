@@ -1,7 +1,7 @@
 
 document.addEventListener("DOMContentLoaded", () => {
 
-  const addToCartButtons = document.querySelectorAll('.btn');
+  const addToCartButtons = document.querySelectorAll('.btn, .add-to-cart');
   const cartCount = document.getElementById('card-count');
 
   let cart = [];
@@ -10,10 +10,11 @@ document.addEventListener("DOMContentLoaded", () => {
     button.addEventListener('click', event => {
       event.preventDefault();
 
-      const productElement = event.target.closest('.product');
+      const productCard = event.target.closest('.product');
+      if (!productCard) return;
 
-      const productName = productElement.querySelector('h3').textContent;
-      const productPrice = productElement.querySelector('.price').textContent;
+      const productName = productCard.querySelector('h3').textContent;
+      const productPrice = productCard.querySelector('.price').textContent;
 
       cart.push({ name: productName, price: productPrice });
 
