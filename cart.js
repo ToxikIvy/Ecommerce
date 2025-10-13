@@ -22,6 +22,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
       console.log("🛒 Cart:", cart);
 
-      
+    });   
   });
 });
