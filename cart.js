@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-if (cawrtItemsContainer) {
+if (cartItemsContainer) {
   displayCartItems();
 }
 
