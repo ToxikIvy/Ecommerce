@@ -26,6 +26,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
       cartCount.classList.add('added');
       setTimeout(() => cartCount.classList.remove('added'), 300);
+
+      console.log("Hello");
+      
     });   
   });
 });
