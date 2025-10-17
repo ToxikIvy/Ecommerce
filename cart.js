@@ -1,10 +1,10 @@
 
 document.addEventListener("DOMContentLoaded", () => {
 
-  const addToCartButtons = document.querySelectorAll('.btn, .add-to-cart');
+  const addToCartButtons = document.querySelectorAll('.btn.add-to-cart');
   const cartCount = document.getElementById('cart-count');
 
-  let cart = JSON.parse(localStroage.getItem('cart')) || [];
+  let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
   if (cartCount) cartCount.textContent = cart.length;
 
