@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart</title>
+    <link rel="stylesheet" href="index.css">
+  </head>
+
+  <body>
+    <header>
+      <a href="index.html" class="logo"><h1>Flowergrove</h1></a>
+      <nav>
+        <a href="home.html">Home</a>
+        <a href="index.html">Shop</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main class="cart-page">
+      <h2>Your Cart</h2>
+      <div id="cart-items"></div>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 FLOWERGROVE. ALL RIGHTS RESERVED.</p>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const cartContainer = document.getElementById("cart-items");
+        const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+        if (cart.length === 0) {
+          cartContainer.innerHTML = "<p>Your cart is empty.</p>";
+        } else {
+          cartContainer.innerHTML = cart.map(item => `
+            <div class="cart-item">
+              <p><strong>${item.name}</strong> - ${item.price}</p>
+            </div>
+          `).join("");
+        }
+      });
+    </script>
+  </body>
+</html>
