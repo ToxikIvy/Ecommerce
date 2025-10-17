@@ -2,7 +2,7 @@
 document.addEventListener("DOMContentLoaded", () => {
 
   const addToCartButtons = document.querySelectorAll('.btn, .add-to-cart');
-  const cartCount = document.getElementById('card-count');
+  const cartCount = document.getElementById('cart-count');
 
   let cart = [];
 
