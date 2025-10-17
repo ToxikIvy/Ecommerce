@@ -19,6 +19,8 @@ document.addEventListener("DOMContentLoaded", () => {
       cart.push({ name: productName, price: productPrice });
 
       cartCount.textContent = cart.length;
+      cartCount.classList.add('added');
+      setTimeout(() => cartCount.classList.remove('added'), 300);
 
       console.log("🛒 Cart:", cart);
 
