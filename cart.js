@@ -36,6 +36,8 @@ if (cartItemsContainer) {
   displayCartItems();
 }
 
+  console.log("Hello");
+
 if (clearCartButton) {
   clearCartButton.addEventListener('click', () => {
     localStorage.removeItem('cart');
