@@ -27,28 +27,6 @@
       <p>&copy; 2025 FLOWERGROVE. ALL RIGHTS RESERVED.</p>
     </footer>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const cartContainer = document.getElementById("cart-items");
-        const cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-        if (cart.length === 0) {
-          cartContainer.innerHTML = "<p>Your cart is empty.</p>";
-        } else {
-          cartContainer.innerHTML = cart.map(item => `
-            <div class="cart-item">
-              <p><strong>${item.name}</strong> - ${item.price}</p>
-            </div>
-          `).join("");
-
-        const clearButton = document.getElementById("clear-cart");
-        if (clearButton) {
-          clearButton.addEventListener("click", () => {
-            localStorage.removeItem("cart");
-            window.location.reload();
-          });
-        }
-      });
-    </script>
+    <script src="cart.js"></script>
   </body>
 </html>
