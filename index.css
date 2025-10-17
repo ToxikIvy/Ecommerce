@@ -212,3 +212,37 @@ footer {
   font-size: 0.9rem;
   margin-top: 50px;
 }
+
+.cart-page {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.cart-page h2 {
+  text-align: center;
+  color: var(--primary);
+  margin-bottom: 20px;
+}
+
+.cart-item {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+
+.cart-item:last-child {
+  border-bottom: none;
+}
+
+.cart-item p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.cart-page p {
+  text-align: center;
+  color: #666;
+}
