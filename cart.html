@@ -20,6 +20,7 @@
     <main class="cart-page">
       <h2>Your Cart</h2>
       <div id="cart-items"></div>
+      <button id="clear-cart" class="btn">Clear Cart</button>
     </main>
 
     <footer>
@@ -39,6 +40,13 @@
               <p><strong>${item.name}</strong> - ${item.price}</p>
             </div>
           `).join("");
+
+        const clearButton = document.getElementById("clear-cart");
+        if (clearButton) {
+          clearButton.addEventListener("click", () => {
+            localStorage.removeItem("cart");
+            window.location.reload();
+          });
         }
       });
     </script>
