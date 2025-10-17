@@ -175,7 +175,7 @@ nav a:hover {
 
 .product .btn {
   margin-top: 5px;
-  display: incline-block;
+  display: inline-block;
 }
 
 .product:hover {
@@ -190,7 +190,7 @@ nav a:hover {
 }
 
 .btn {
-  display: incline-block;
+  display: inline-block;
   background: var(--primary);
   color: white;
   padding: 10px 20px;
